@@ -18,6 +18,7 @@ public class DataReader {
 
     private static final Logger logger = LogManager.getLogger();
     private static final String DEFAULT_FILE_NAME = "data/default.txt";
+    private static final String LINE_DELIMITER = "\r\n";
 
     public String readData(String fileName){
         StringBuilder text = new StringBuilder();
@@ -34,7 +35,7 @@ public class DataReader {
             logger.error(Level.ERROR, e);
         }
         for(String line : lines){
-            text.append(line).append("\r\n");
+            text.append(line).append(LINE_DELIMITER);
         }
         return text.toString();
     }

@@ -1,6 +1,6 @@
 package com.yuliana.composition.parser;
 
-import com.yuliana.composition.entity.Component;
+import com.yuliana.composition.entity.TextComponent;
 
 public abstract class AbstractParser {
     protected AbstractParser nextParser;
@@ -9,13 +9,12 @@ public abstract class AbstractParser {
         this.nextParser = nextParser;
     }
 
-    public Component parseNext(String text){
-        Component component = nextParser.parse(text);
+    public TextComponent parseNext(String text){
         if(nextParser != null){
-            nextParser.parseNext(text);
+            return nextParser.parse(text);
         }
-        return component;
+        return null;
     }
 
-    public abstract Component parse(String text);
+    public abstract TextComponent parse(String text);
 }

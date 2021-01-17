@@ -1,7 +1,6 @@
 package com.yuliana.composition.parser;
 
-import com.yuliana.composition.entity.Component;
-import com.yuliana.composition.reader.DataReader;
+import com.yuliana.composition.entity.TextComponent;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,8 +16,8 @@ public class WordParserTest {
     }
 
     @Test
-    public void readDataCorrectFileNameTest(){
-        Component component = wordParser.parse(WORD);
+    public void parseTest(){
+        TextComponent component = wordParser.parse(WORD);
         String actual = component.build();
         String expected = "asba.6c";
         assertEquals(actual, expected);

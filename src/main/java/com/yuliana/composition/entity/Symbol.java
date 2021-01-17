@@ -1,6 +1,8 @@
 package com.yuliana.composition.entity;
 
-public class Symbol implements Component{
+import java.util.List;
+
+public class Symbol implements TextComponent {
 
     private String symbol;
 
@@ -9,11 +11,22 @@ public class Symbol implements Component{
     }
 
     @Override
-    public void add(Component component) {
+    public CurrentLevel getCurrentLevel() {
+        return CurrentLevel.SYMBOL;
     }
 
     @Override
-    public void remove(Component component) {
+    public List<TextComponent> getComponents() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void add(TextComponent component) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void remove(TextComponent component) {
         throw new UnsupportedOperationException();
     }
 
