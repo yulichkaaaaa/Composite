@@ -9,7 +9,6 @@ import java.util.regex.Pattern;
 
 public class SentenceParser extends AbstractParser{
 
-    //private static final String LEXEME_DELIMITER = " ";
     private static final String SPACE = " ";
     private static final String LEXEME = "[A-Za-zА-Яа-я0-9,.!?()=-]+";
 
