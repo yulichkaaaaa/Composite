@@ -25,7 +25,7 @@ public class SentenceParserText {
     public void parseTest(){
         TextComponent component = sentenceParser.parse(SENTENCE);
         String actual = component.build();
-        String expected = "It has survived - not only (five) centuries, but also the leap into electronic" +
+        String expected = "It has survived - not only (five) centuries, but also the leap into electronic " +
                 "typesetting, remaining essentially unchanged.";
         assertEquals(actual, expected);
     }

@@ -1,5 +1,6 @@
 package com.yuliana.composition.parser;
 
+import com.yuliana.composition.entity.CurrentLevel;
 import com.yuliana.composition.entity.TextComponent;
 import com.yuliana.composition.entity.TextComposite;
 import com.yuliana.composition.entity.Symbol;
@@ -17,9 +18,9 @@ public class WordParser extends AbstractParser{
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             String symbol = matcher.group();
-
             word.add(new Symbol(symbol));
         }
+        word.setCurrentLevel(CurrentLevel.WORD);
         return word;
     }
 }
