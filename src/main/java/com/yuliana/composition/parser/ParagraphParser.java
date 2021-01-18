@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ParagraphParser extends AbstractParser{
-    private static final String SENTENCE = "[A-ZА-Я0-9\"].+[.?!]";
+    private static final String SENTENCE = "[A-ZА-Я0-9\"].+[.?!](\\s|)";
     @Override
     public TextComponent parse(String text) {
         TextComposite paragraph = new TextComposite();

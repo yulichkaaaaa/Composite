@@ -8,11 +8,11 @@ import static org.testng.Assert.assertEquals;
 
 public class ParagraphParserTest {
     private ParagraphParser paragraphParser;
-    private static final String PARAGRAPH = "It has survived - not only (five) centuries, but also the leap into electronic " +
+    private static final String PARAGRAPH = "    It has survived - not only (five) centuries, but also the leap into electronic " +
             "typesetting, remaining essentially unchanged. It was popularised in the \"Динамо\" (Рига) " +
             "with the release of Letraset sheets.toString() containing Lorem Ipsum passages, and " +
             "more recently with desktop publishing software like Aldus PageMaker Faclon9 including " +
-            "versions of Lorem Ipsum!";
+            "versions of Lorem Ipsum!\r\n";
 
     @BeforeTest
     private void init(){
