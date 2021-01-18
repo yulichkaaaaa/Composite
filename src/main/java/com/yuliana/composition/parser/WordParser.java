@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class WordParser extends AbstractParser{
 
-    private static final String SYMBOL = "[A-Za-z0-9А-Яа-я().?:\"!=]";
+    private static final String SYMBOL = "[A-Za-z0-9А-Яа-я().?:\"!='-]";
     @Override
     public TextComponent parse(String text) {
         TextComposite word = new TextComposite();

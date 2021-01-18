@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LexemeParser extends AbstractParser{
-    public static final String WORD = "^[A-Za-zА-Яа-я0-9-()\".=!']+[A-Za-zА-Яа-я0-9\"()]";
+    public static final String WORD = "^[A-Za-zА-Яа-я0-9-()\".=!']*[A-Za-zА-Яа-я0-9\"()]";
     public static final String PUNCTUATION_MARK = "[,.!?-]{1,3}$";
 
     @Override

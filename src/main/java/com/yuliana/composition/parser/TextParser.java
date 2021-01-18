@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class TextParser extends AbstractParser{
 
-    private static final String PARAGRAPH = "^\\s{4}.+";
+    private static final String PARAGRAPH = "\\s{4}.+\\r\\n";
 
     @Override
     public TextComponent parse(String text) {
